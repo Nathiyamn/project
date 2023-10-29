@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para" name="">initial</p>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="input"onfocus="changecolor()">
+        </form>
+        <button onclick="updateContent()">Click</button>
+        <script>
+            function updateContent()
+            {
+                let input=document.getElementById("input");
+                let output=input.value;
+
+                let para=document.getElementById("para");
+                para.innerHTML=output;
+            }
+            function changecolor()
+            {
+                let input=document.getElementById("input");
+                input.style.backgroundColor='Green'
+            }
+        </script>
+        <div id="div" style="height: 100px;width:100px;padding:20px;color:aqua;"
+        onmouseover="colorchange()"
+        onmouseleave="removecolor()">Hi beauty...!
+        </div>
+        <script>
+            function colorchange()
+            {
+                let col=document.getElementById("div");
+                col.style.backgroundColor='black'
+            }
+            function removecolor()
+            {
+                let col=document.getElementById("div");
+                col.style.background='white'
+            }
+            </script>
+            
+            
+                
+
+            
+        </script>
+        
+
+</body>
+</html>
